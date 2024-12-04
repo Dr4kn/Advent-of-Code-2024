@@ -10,7 +10,7 @@ fun main() {
                 .map { it.toInt() }
                 .zipWithNext { a, b ->  a * b}}
             .flatten()
-            .reduce { acc, ints ->  acc + ints}
+            .sum()
     }
 
     fun part2(input: List<String>): Int {
@@ -37,7 +37,6 @@ fun main() {
                 }
             }
         }
-
         return result
     }
 
