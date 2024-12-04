@@ -11,7 +11,6 @@ fun main() {
         val parsed = parse(input)
         var result = 0
         parsed.forEach { line ->
-            val sorted = line.sorted()
             if (line == line.sorted() || line == line.sortedDescending()) {
                 val adjacentLevels = line
                     .windowed(2, 1)

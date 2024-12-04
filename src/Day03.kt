@@ -36,7 +36,6 @@ fun main() {
                         .first()
                 }
             }
-            if (instruction == "do") enabled
         }
 
         return result
