@@ -44,9 +44,11 @@ fun main() {
         for (row in 1..input.size - 2) {
             for (column in 1..input.size - 2) {
                 // /
-                val diagonalLeft = "" + input[column + 1][row - 1] + input[column][row] + input[column - 1][row + 1]
+                val diagonalLeft = buildString {
+                    append(input[column + 1][row - 1], input[column][row], input[column - 1][row + 1]) }
                 // \
-                val diagonalRight = "" + input[column - 1][row - 1] + input[column][row] + input[column + 1][row + 1]
+                val diagonalRight = buildString {
+                    append(input[column - 1][row - 1], input[column][row], input[column + 1][row + 1]) }
 
                 if (diagonalLeft.contains(matcher) && diagonalRight.contains(matcher)) occurrences++
             }
